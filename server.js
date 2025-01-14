@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const logToConsole = require('./logToConsole');
+const logToConsole = require('./middleware/logToConsole');
 
 const app = express();
 const PORT = process.env.PORT || 7890;
@@ -19,44 +19,62 @@ app.get('/', (req, res) => {
 app.post("/more", (req, res) => {
     logToConsole(req.body.details);
     switch (req.body.details) {
-        case "spry":
-            vocXdata = require('./data.json')[0];
+        case "hone":
+            vocXdata = require('./string.json')[0];
             break;
-        case "concession":
-            vocXdata = require('./data.json')[1];
+        case "misguided":
+            vocXdata = require('./string.json')[1];
             break;
-        case "obscuration":
-            vocXdata = require('./data.json')[2];
+        case "virtuoso":
+            vocXdata = require('./string.json')[2];
             break;
-        case "consecutive":
-            vocXdata = require('./data.json')[3];
+        case "omit":
+            vocXdata = require('./string.json')[3];
             break;
-        case "succeed":
-            vocXdata = require('./data.json')[4];
+        case "isle":
+            vocXdata = require('./string.json')[4];
             break;
-        case "deduction":
-            vocXdata = require('./data.json')[5];
+        case "mnemonic":
+            vocXdata = require('./string.json')[5];
             break;
-        case "adulate":
-            vocXdata = require('./data.json')[6];
+        case "bypass":
+            vocXdata = require('./string.json')[6];
             break;
-        case "commotion":
-            vocXdata = require('./data.json')[13];
+        case "misconstrue":
+            vocXdata = require('./string.json')[7];
             break;
-        case "dissent":
-            vocXdata = require('./data.json')[14];
+        case "abate":
+            vocXdata = require('./string.json')[8];
             break;
-        case "curtail":
-            vocXdata = require('./data.json')[19];
+        case "pivotal":
+            vocXdata = require('./string.json')[9];
+            break;
+        case "skewed":
+            vocXdata = require('./string.json')[10];
+            break;
+        case "reprimand":
+            vocXdata = require('./string.json')[11];
+            break;
+        case "denominator":
+            vocXdata = require('./string.json')[12];
+            break;
+        case "rupture":
+            vocXdata = require('./string.json')[13];
+            break;
+        case "comestibles":
+            vocXdata = require('./string.json')[14];
             break;
         case "inaugural":
-            vocXdata = require('./data.json')[7];
+            vocXdata = require('./string.json')[15];
             break;
-        case "disclosure":
-            vocXdata = require('./data.json')[23];
+        case "harbinger":
+            vocXdata = require('./string.json')[16];
             break;
-        case "yield":
-            vocXdata = require('./data.json')[12];
+        case "belabor":
+            vocXdata = require('./string.json')[17];
+            break;
+        case "leash":
+            vocXdata = require('./string.json')[18];
             break;
         default:
             break;
@@ -70,3 +88,5 @@ app.listen(PORT, function () {
 });
 
 
+// 10 skewed
+// 11 reprimand
